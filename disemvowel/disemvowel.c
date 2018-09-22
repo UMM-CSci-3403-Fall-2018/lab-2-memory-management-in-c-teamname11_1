@@ -38,12 +38,14 @@ for(int i = 0; i < strlen(str); i++) {
 
 char *copyNonVowels(int size, char *str) {
 	char* disemvoweledStr;
+	int j = 0;
 	disemvoweledStr = (char*)calloc(size+1, sizeof(char));
 
 	for(int i = 0; i < size+1; i++) {
 	if (!(isVowel(str[i]))) {
-		disemvoweledStr[i] = str[i];
-	}
+		disemvoweledStr[j] = str[i];
+		j++;
+		}
 	}
 	disemvoweledStr[size+1] = '\0';
 
