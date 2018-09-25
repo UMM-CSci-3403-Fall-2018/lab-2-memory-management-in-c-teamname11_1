@@ -28,7 +28,7 @@ bool isVowel(char letter) {
 int determineLength(char *str) {
 int count = 0;
 
-for(int i = 0; i < strlen(str); i++) {
+for(unsigned int i = 0; i < strlen(str); i++) {
 	if (str[i] != isVowel(str[i])) {
 		count++;
 		}
@@ -41,13 +41,13 @@ char *copyNonVowels(int size, char *str) {
 	int j = 0;
 	disemvoweledStr = (char*)calloc(size+1, sizeof(char));
 
-	for(int i = 0; i < size+1; i++) {
+	for(int i = 0; i < size; i++) {
 	if (!(isVowel(str[i]))) {
 		disemvoweledStr[j] = str[i];
 		j++;
 		}
 	}
-	disemvoweledStr[size+1] = '\0';
+	disemvoweledStr[size] = '\0';
 
 	return disemvoweledStr;
 }
