@@ -1,6 +1,8 @@
 #include <gtest/gtest.h>
-
 #include "disemvowel.h"
+
+// Each test has a placeholder variable that calls disemvowel()
+// so that whatever is returned from disemvowel() can be freed. 
 
 TEST(Disemvowel, HandleEmptyString) {
   char *str = disemvowel((char*) "");  
