@@ -59,6 +59,5 @@ TEST(Palindrome, HandlesLongerStrings) {
 
 int main(int argc, char *argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
-  free(argv);
   return RUN_ALL_TESTS();
 }
